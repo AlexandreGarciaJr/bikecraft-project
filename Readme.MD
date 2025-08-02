@@ -1,3 +1,3 @@
 ### Visualização:
 
-https://alexandregarciajr.github.io/bikecraft-project
+https://alexandregarciajr.github.io/bikecraft-project/
