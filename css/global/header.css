@@ -46,6 +46,7 @@
     background: var(--cor-11);
     padding: 12px 16px;
     border-radius: 4px;
+    transition: 0.3s;
   }
   .header-menu a:hover {
     background-color: var(--cor-10);
