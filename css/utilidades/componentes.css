@@ -29,11 +29,30 @@
   background: var(--cor-10);
   color: var(--cor-2);
   transition: background 0.3s ease, color 0.3s ease;
-  max-width: max-content
+  max-width: max-content;
 }
 
 .botao.secundario:hover {
   background: var(--cor-8);
+}
+
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: transform 0.3s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(5px);
 }
 
 @media (max-width: 600px) {
@@ -64,22 +83,22 @@
 }
 
 /* titulo internas */
-.titulo-bg{
+.titulo-bg {
   background-color: var(--cor-11);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.titulo{
+.titulo {
   margin-bottom: 4px;
 }
 
 @media (max-width: 800px) {
-  .titulo-bg{
+  .titulo-bg {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .titulo p{
+  .titulo p {
     font-size: 1rem;
     text-transform: lowercase;
     font-weight: 400;
