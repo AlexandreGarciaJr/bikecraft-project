@@ -19,6 +19,10 @@
 @import url(./bicicletas/bicicletas-lista.css);
 @import url(./bicicletas/bicicletas.css);
 
+/* Biciclet */
+@import url(./bicicleta/bicicleta.css);
+
+
 /* seguros */
 @import url(./seguros/seguros.css);
 @import url(./seguros/vantagens.css);
