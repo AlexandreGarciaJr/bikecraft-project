@@ -27,7 +27,7 @@ parametros.forEach(ativarProduto);
 // Perguntas Frequentes
 const perguntas = document.querySelectorAll('.perguntas button');
 
-function ativarPergunta(event){
+function ativarPergunta(event) {
     const pergunta = event.currentTarget;
     const controls = pergunta.getAttribute("aria-controls");
     const resposta = document.getElementById(controls);
@@ -37,8 +37,26 @@ function ativarPergunta(event){
     pergunta.setAttribute('aria-expanded', ativa);
 }
 
-function eventosPerguntas(pergunta){
+function eventosPerguntas(pergunta) {
     pergunta.addEventListener('click', ativarPergunta);
 }
 
 perguntas.forEach(eventosPerguntas);
+
+//Galeria de Bicicletas
+const galeria = document.querySelectorAll('.bicicleta-imagens img');
+const galetiaContainer = document.querySelector('.bicicleta-imagens');
+
+function trocarImagem(event) {
+    const img = event.currentTarget;
+    const media = matchMedia("(min-width: 1000px)").matches;
+    if (media) {
+        galetiaContainer.prepend(img)
+    }
+}
+
+function eventosGaleria(img) {
+    img.addEventListener('click', trocarImagem);
+}
+
+galeria.forEach(eventosGaleria);
